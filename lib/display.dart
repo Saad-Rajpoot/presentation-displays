@@ -1,15 +1,10 @@
+/// for display please check response from invokeMethod
 Display displayFromJson(Map<String, dynamic> json) => Display(
-    displayId: json['displayId'],
-    flag: json['flags'],
-    name: json['name'],
-    rotation: json['rotation']);
-
-/// for release please check response from invokeMethod
-Display displayReleaseFromJson(Map<String, dynamic> json) => Display(
-    displayId: json['a'],
-    flag: json['b'],
-    name: json['d'],
-    rotation: json['c']);
+  displayId: json['displayId'] ?? json['a'],
+  flag: json['flags'] ?? json['b'],
+  name: json['name'] ?? json['d'],
+  rotation: json['rotation'] ?? json['c'],
+);
 
 /// The default Display id, which is the id of the built-in primary display
 /// assuming there is one.
